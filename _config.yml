@@ -2,9 +2,9 @@
 title: CodePilot.io - A PaaS for Automation
 email: engineering@twinenginelabs.com
 description: > # this means to ignore newlines until "baseurl:"
-CodePilot.io is a PaaS that helps developers write realtime and periodic 
-automation routines. This website is the documentation site for aspiring
-and skilled developers alike who want to learn how to use our product.
+  CodePilot.io is a PaaS that helps developers write realtime and periodic 
+  automation routines. This website is the documentation site for aspiring
+  and skilled developers alike who want to learn how to use our product.
 baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://yourdomain.com" # the base hostname & protocol for your site
 github_username:  twinenginelabs
