@@ -1,0 +1,21 @@
+- avatar: images/keith-linkedin-zoomed.png
+  name: Keith Hanson
+  position: CEO
+  socials:
+    - link: https://www.linkedin.com/in/hansonkeith/
+      icon: linkedin
+  desc:
+- avatar: images/brady-linkedin.jpg
+  name: Brady McNaughton
+  position: COO
+  socials:
+    - link: https://www.linkedin.com/in/brady-mcnaughton-79719a36/
+      icon: linkedin
+  desc:
+- avatar: images/nick-linkedin.jpg
+  name: Nicholas Phillips
+  position: CTO
+  socials:
+    - link: https://www.linkedin.com/in/nicholasdphillips/ 
+      icon: linkedin
+  desc:

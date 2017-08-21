@@ -1,0 +1,20 @@
+- name: Home
+  path: index.html
+  section_id: home
+- name: About
+  path: about.html
+  section_id: about
+- name: Internships
+  path: internships.html
+  section_id: internships
+- name: Lessons
+  path: lessons/
+  section_id: lessons
+#- name: Portfolio
+#  path: portfolio.html
+#  section_id: portfolio
+#  children:
+#    - name: Portfolio
+#      path: portfolio.html
+#    - name: Portfolio item
+#      path: portfolio-item.html

@@ -1,0 +1,315 @@
+---
+layout: default
+section_id: home
+slides:
+  - bg: images/team.jpg
+    small_title:
+      klass: bottom-to-top
+      text: How to get a job at Twin Engine Labs
+    title:
+      klass: bottom-to-top
+      text: Using CodePilot.io
+    buttons:
+      klass: bottom-to-top
+      items:
+        - text: Learn How
+          link_to: /about
+  - bg: images/code.jpg
+    small_title:
+      klass: bottom-to-top
+      text: Learn how to
+    title:
+      klass: bottom-to-top
+      text: Get Started
+    buttons:
+      klass: bottom-to-top
+      items:
+        - klass: boxed
+          text: What is CodePilot?
+          link_to: http://www.codepilot.io
+        - text: Learn how to Set Up!
+          link_to: #
+  - bg: images/app.jpg
+    small_title:
+      klass: bottom-to-top
+      text: Learn how to use our platform
+    title:
+      klass: bottom-to-top
+      text: Use Cases
+    buttons:
+      klass: bottom-to-top
+      items:
+        - text: See Case Studies
+          link_to: #
+
+
+
+works:
+  - image: images/beginner.gif
+    title: Beginners
+    link_to: portfolio-item.html
+    klass: graphi-design
+    desc: Setup your laptop and learn a programming language.
+  - image: images/scientists.gif
+    title: Advanced Setup
+    link_to: portfolio-item.html
+    klass: graphi-design
+    desc: Understand what the CodePilot hosting platform is doing for you.
+  - image: images/coding-400x400.gif
+    title: Writing your first script
+    link_to: portfolio-item.html
+    klass: graphi-design
+    desc: From humble 'hello world' to intercepting a form post.
+  - image: images/signup-400x400.gif
+    title: Use Case - Landing Pages
+    link_to: portfolio-item.html
+    klass: graphi-design
+    desc: Receive a landing page submission and trigger multiple actions.
+  - image: images/bored-400x400.gif
+    title: Storing information
+    link_to: portfolio-item.html
+    klass: graphi-design
+    desc: Learn how to use the default storage mechanism - RethinkDB.
+  - image: images/matrix-400x400.gif
+    title: Advanced Storage Setup
+    link_to: portfolio-item.html
+    klass: graphi-design
+    desc: Fully understand the deployment of databases for your hosting instance.
+  - image: images/spy-400x400.gif
+    title: Use Case - Enrich Contact Information
+    link_to: portfolio-item.html
+    klass: graphi-design
+    desc: Use the platform to schedule jobs for simultaneous execution and storing the results.
+  - image: images/pitfalls-400x400.gif
+    title: Designing with faults in mind
+    link_to: portfolio-item.html
+    klass: graphi-design
+    desc: The common pitfalls of automation development.
+
+
+services:
+  - icon: trophy
+    title: Web Design
+    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
+  - icon: cogs
+    title: Web Development
+    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
+  - icon: pagelines
+    title: Branding
+    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
+  - icon: lock
+    title: Security
+    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
+
+milestones:
+  - icon: folder-open
+    from: 0
+    to: 69
+    title: Projects Completed
+  - icon: coffee
+    from: 0
+    to: 726
+    title: Cups of coffee offered
+  - icon: thumbs-up
+    from: 0
+    to: 59
+    title: Happy clients
+  - icon: file-text
+    from: 0
+    to: 21
+    title: Articles Published
+
+---
+
+
+<div class='mod modDefaultSlider'>
+  <div class='sequence' data-autostop='on' data-timeout='0'>
+    <a class='sequence-prev' href='javascript:void(0);'>
+      <span></span>
+    </a>
+    <a class='sequence-next' href='javascript:void(0);'>
+      <span></span>
+    </a>
+    <ul class='sequence-pagination'>
+      {% for slide in page.slides %}
+        {% if forloop.first %}
+          {% assign class = 'current' %}
+        {% else %}
+          {% assign class = '' %}
+        {% endif %}
+        <li class="{{class}}"></li>
+      {% endfor %}
+    </ul>
+    <ul class='sequence-canvas'>
+      {% for slide in page.slides %}
+        {% if forloop.first %}
+          {% assign style = 'static' %}
+        {% else %}
+          {% assign style = '' %}
+        {% endif %}
+
+        <li class='frame {{style}} {{ slide.klass }}'>
+          <div class='bg' style='background-image: url({{ slide.bg}});'></div>
+          <div class='small-title {{ slide.small_title.klass }}'>
+            <div class='row'>
+              <div class='large-12 columns'>
+                <h2>{{ slide.small_title.text }}</h2>
+              </div>
+            </div>
+          </div>
+          <div class='title {{ slide.title.klass }}'>
+            <div class='row'>
+              <div class='large-12 columns'>
+                <h2>{{ slide.title.text }}</h2>
+              </div>
+            </div>
+          </div>
+          <div class='buttons-wrapper {{ slide.buttons.klass }}'>
+            <div class='row'>
+              <div class='large-12 columns'>
+                <div class='two spacing'></div>
+                {% for button in slide.buttons.items %}
+                  <a class='button {{ button.klass }}' href='{{ button.link_to }}'>{{ button.text }}</a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div class="four spacing"></div>
+
+<div class="row">
+  <div class="medium-3 large-3 columns">
+    {% include icon-text.html title='Install' desc='All you need is a PC or Mac.'  icon_class='fa fa-gear' delay='0' shape_class='icon-text-circle' %}
+  </div>
+  <div class="medium-3 large-3 columns">
+    {% include icon-text.html title='Learn' desc='Follow the lessons - from absolute beginner to automation developer.' icon_class='fa fa-lightbulb-o' delay='200' shape_class='icon-text-circle' %}
+  </div>
+  <div class="medium-3 large-3 columns">
+    {% include icon-text.html title='Internship' desc='We provide internships to capable integration developers!' icon_class='fa fa-building' delay='400' shape_class='icon-text-circle' %}
+  </div>
+  <div class="medium-3 large-3 columns">
+    {% include icon-text.html title='Examples' desc='Our lessons provide typical use cases with real life services.' icon_class='fa fa-cogs' delay='600' shape_class='icon-text-circle' %}
+  </div>
+
+  <a class="button " href="/about" style="width:100%">Learn More</a>
+</div>
+
+<div class="spacing"></div>
+
+<div class="full" style="background: #f5f5f5;">
+  <div class="row">
+    <div class="large-12 columns">
+      {% include section-header.html title="Lessons" %}
+      <div class="spacing"></div>
+      <p style="text-align:center;">
+        Hover over the lessons below to begin learning how to create automation routines with CodePilot.
+      </p>
+      <div class="three spacing"></div>
+    </div>
+  </div>
+
+  <div class="mod modGallery">
+    <ul class="gallery small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+      {% for work in page.works %}
+        <li class="{{ work.klass }}">
+          <a href='{{ work.link_to }}'>
+            <img alt="" src="{{ work.image }}" style="vertical-align: middle;"/>
+            <div class='overlay'>
+              <div class='thumb-info'>
+                <h3>{{ work.title }}</h3>
+                <p>{{ work.desc }}</p>
+              </div>
+            </div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+
+<div class='full'>
+  <div class='row'>
+    <div class='large-12 columns'>
+      {% include section-header.html title="Our founders" %}
+      <div class='spacing'></div>
+      <p>
+      </p>
+      <div class='two spacing'></div>
+    </div>
+  </div>
+  <div class='row'>
+    {% for member in site.data.members %}
+      <div class='small-12 medium-4 large-4 columns'>
+        <div class='mod modTeamMember'>
+          <div class='member'>
+            <img class="avatar" alt="" src="{{ member.avatar }}" />
+            <div class='overlay'>
+              <div class='intro'>
+                <h3>{{member.name}}</h3>
+                <p>{{member.position}}</p>
+                <ul class='socials'>
+                  {% for social in member.socials %}
+                    <li>
+                      <a href='{{social.link}}'>
+                        <i class='fa fa-{{social.icon}}'></i>
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class='two spacing'></div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class='row'>
+    {% for member in site.data.developers %}
+      <div class='small-12 medium-4 large-4 columns'>
+        <div class='mod modTeamMember'>
+          <div class='member'>
+            <img class="avatar" alt="" src="{{ member.avatar }}" />
+            <div class='overlay'>
+              <div class='intro'>
+                <h3>{{member.name}}</h3>
+                <p>{{member.position}}</p>
+                <ul class='socials'>
+                  {% for social in member.socials %}
+                    <li>
+                      <a href='{{social.link}}'>
+                        <i class='fa fa-{{social.icon}}'></i>
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class='two spacing'></div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class='full no-padding' style='background: #fff'>
+  <div class='two spacing'></div>
+  <div class='mod modCallToAction'>
+    <div class='row'>
+      <div class='medium-9 large-9 columns'>
+        <p>Want automation for your company? We're ready to help. Click to reach out to us.</p>
+      </div>
+      <div class='medium-3 large-3 columns'>
+        <a class='button' href='mailto:engineering@twinenginelabs.com?Subject=I need automation!'>Email Us</a>
+      </div>
+    </div>
+  </div>
+  <div class='spacing'></div>
+</div>
